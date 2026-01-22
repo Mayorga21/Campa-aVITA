@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITA - Movimiento Estudiantil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2d6a6a 0%, #3a8080 50%, #4a9999 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-section {
+            margin-bottom: 30px;
+        }
+
+        .logo-circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #2d6a6a, #4a9999);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 5px 15px rgba(45, 106, 106, 0.4);
+        }
+
+        h1 {
+            color: #2d6a6a;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #5a9999;
+            font-size: 14px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .quote-container {
+            background: linear-gradient(135deg, #f0f9f9, #e6f4f4);
+            border-left: 5px solid #2d6a6a;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quote-text {
+            font-size: 22px;
+            color: #2d6a6a;
+            font-style: italic;
+            line-height: 1.6;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .cta-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .cta-text {
+            font-size: 28px;
+            color: #2d6a6a;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .vote-button {
+            background: linear-gradient(135deg, #2d6a6a, #3a8080);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(45, 106, 106, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .vote-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(45, 106, 106, 0.4);
+            background: linear-gradient(135deg, #3a8080, #4a9999);
+        }
+
+        .new-quote-btn {
+            background: transparent;
+            color: #5a9999;
+            border: 1px solid #c0d9d9;
+            padding: 10px 25px;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .new-quote-btn:hover {
+            background: #f0f9f9;
+            color: #2d6a6a;
+            border-color: #2d6a6a;
+        }
+
+        .values {
+            margin-top: 20px;
+            color: #5a9999;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .quote-text {
+                font-size: 18px;
+            }
+
+            .cta-text {
+                font-size: 24px;
+            }
+
+            .vote-button {
+                padding: 15px 40px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo-circle">V</div>
+            <h1>VITA</h1>
+            <p class="subtitle">Vida · Identidad · Trascendencia · Acción</p>
+        </div>
+
+        <div class="quote-container">
+            <p class="quote-text" id="quote"></p>
+        </div>
+
+        <div class="cta-section">
+            <p class="cta-text">¡Tu voz importa!</p>
+            <button class="vote-button" onclick="handleVote()">VOTA POR VITA</button>
+            <br>
+            <a href="propuestas.html" class="new-quote-btn">Ver Propuestas →</a>
+            <p class="values">Construyendo una UNADECA para todos</p>
+        </div>
+    </div>
+
+    <script>
+        const quotes = [
+            "Con propósito y fe, construimos el futuro de UNADECA.",
+            "Tu identidad en Cristo es tu fortaleza para servir y liderar.",
+            "Juntos, con valores firmes, trascendemos los límites de lo posible.",
+            "La acción guiada por principios es el cambio que necesitamos.",
+            "Seamos sal y luz en nuestra universidad.",
+            "Una comunidad universitaria fuerte nace del servicio y la integridad.",
+            "Tu participación construye el futuro que Dios tiene para UNADECA.",
+            "La verdadera educación prepara la mente, el cuerpo y el espíritu.",
+            "Cada voz cuenta, cada decisión refleja nuestros valores.",
+            "El compromiso estudiantil honra a Dios y transforma vidas.",
+            "Vida: celebramos cada don y oportunidad que recibimos.",
+            "Identidad: arraigados en Cristo, firmes en nuestros valores.",
+            "Trascendencia: nuestro impacto alcanza más allá de las aulas.",
+            "Acción: de la fe a los hechos concretos que marcan diferencia.",
+            "Unidos en propósito, diversos en talentos, fuertes en comunidad.",
+            "Excelencia académica con corazón de servicio.",
+            "Donde la fe y el conocimiento se encuentran para transformar.",
+            "Lidera con integridad, sirve con amor, transforma con propósito."
+        ];
+
+        function getRandomQuote() {
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        function handleVote() {
+            alert('¡Gracias por tu interés! 🌟\n\nMantente atento a las fechas de votación.\nSíguenos en redes sociales para más información sobre nuestras propuestas.');
+        }
+
+        // Mostrar frase aleatoria al cargar
+        window.onload = function() {
+            document.getElementById('quote').textContent = getRandomQuote();
+        };
+    </script>
+</body>
+</html>
