@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores - VITA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f9f9 0%, #ffffff 100%);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2d6a6a, #3a8080);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Flip Card Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Flip Card Container */
+        .flip-card {
+            background-color: transparent;
+            height: 350px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .flip-card-front {
+            background: linear-gradient(135deg, #2d6a6a, #3a8080);
+            color: white;
+        }
+
+        .flip-card-back {
+            background: white;
+            color: #333;
+            transform: rotateY(180deg);
+            border: 3px solid #2d6a6a;
+        }
+
+        .value-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .value-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .value-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .value-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .tap-hint {
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+            font-style: italic;
+        }
+
+        /* Color variations */
+        .vida .flip-card-front {
+            background: linear-gradient(135deg, #2d6a6a, #3a8080);
+        }
+        .vida .flip-card-back {
+            border-color: #2d6a6a;
+        }
+
+        .identidad .flip-card-front {
+            background: linear-gradient(135deg, #3a8080, #4a9999);
+        }
+        .identidad .flip-card-back {
+            border-color: #3a8080;
+        }
+
+        .trascendencia .flip-card-front {
+            background: linear-gradient(135deg, #4a9999, #5a9999);
+        }
+        .trascendencia .flip-card-back {
+            border-color: #4a9999;
+        }
+
+        .accion .flip-card-front {
+            background: linear-gradient(135deg, #5a9999, #2d6a6a);
+        }
+        .accion .flip-card-back {
+            border-color: #5a9999;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .flip-card {
+                height: 320px;
+            }
+
+            .value-icon {
+                font-size: 60px;
+            }
+
+            .value-title {
+                font-size: 28px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* Instructions */
+        .instructions {
+            text-align: center;
+            color: #5a9999;
+            font-size: 16px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nuestros Valores</h1>
+        <p>Los pilares que guían nuestro compromiso con UNADECA</p>
+    </div>
+
+    <div class="container">
+        <div class="intro-text">
+            <p>VITA representa nuestro compromiso con una educación integral que va más allá de lo académico. Cada valor es fundamental en nuestra visión para transformar UNADECA.</p>
+        </div>
+
+        <div class="instructions">
+            ✨ Toca cada tarjeta para conocer más sobre nuestros valores
+        </div>
+
+        <div class="values-grid">
+            <!-- VIDA -->
+            <div class="flip-card vida">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="value-icon">🌱</div>
+                        <h2 class="value-title">Vida</h2>
+                        <p class="value-subtitle">Celebramos cada oportunidad</p>
+                        <p class="tap-hint">Toca para ver más</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="color: #2d6a6a; font-size: 24px; margin-bottom: 20px;">Vida</h3>
+                        <p class="value-description">
+                            [Aquí va la descripción completa del valor VIDA. Explica qué significa este valor para VITA y cómo se refleja en las acciones y propuestas del movimiento estudiantil.]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IDENTIDAD -->
+            <div class="flip-card identidad">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="value-icon">🎯</div>
+                        <h2 class="value-title">Identidad</h2>
+                        <p class="value-subtitle">Arraigados en Cristo</p>
+                        <p class="tap-hint">Toca para ver más</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="color: #3a8080; font-size: 24px; margin-bottom: 20px;">Identidad</h3>
+                        <p class="value-description">
+                            [Aquí va la descripción completa del valor IDENTIDAD. Explica qué significa este valor para VITA y cómo se refleja en las acciones y propuestas del movimiento estudiantil.]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRASCENDENCIA -->
+            <div class="flip-card trascendencia">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="value-icon">⭐</div>
+                        <h2 class="value-title">Trascendencia</h2>
+                        <p class="value-subtitle">Impacto más allá del aula</p>
+                        <p class="tap-hint">Toca para ver más</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="color: #4a9999; font-size: 24px; margin-bottom: 20px;">Trascendencia</h3>
+                        <p class="value-description">
+                            [Aquí va la descripción completa del valor TRASCENDENCIA. Explica qué significa este valor para VITA y cómo se refleja en las acciones y propuestas del movimiento estudiantil.]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACCIÓN -->
+            <div class="flip-card accion">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="value-icon">💪</div>
+                        <h2 class="value-title">Acción</h2>
+                        <p class="value-subtitle">De la fe a los hechos</p>
+                        <p class="tap-hint">Toca para ver más</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="color: #5a9999; font-size: 24px; margin-bottom: 20px;">Acción</h3>
+                        <p class="value-description">
+                            [Aquí va la descripción completa del valor ACCIÓN. Explica qué significa este valor para VITA y cómo se refleja en las acciones y propuestas del movimiento estudiantil.]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 36px; font-weight: bold;">V</div>
+            </div>
+            <h3>VITA</h3>
+            <p class="footer-tagline">Vida · Identidad · Trascendencia · Acción</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank">
+                    <div class="social-icon">📷</div>
+                    <div>Instagram</div>
+                </a>
+            </div>
+
+            <nav class="footer-nav">
+                <a href="index.html">Inicio</a>
+                <a href="propuestas.html">Propuestas</a>
+                <a href="vota-vita.html">Vota VITA</a>
+                <a href="planilla.html">Planilla</a>
+                <a href="valores.html">Valores</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Add click/tap functionality for flip cards
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        });
+    </script>
+</body>
+</html>

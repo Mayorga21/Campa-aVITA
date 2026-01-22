@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla - VITA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f9f9 0%, #ffffff 100%);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2d6a6a, #3a8080);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Junta Directiva Section */
+        .junta-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #2d6a6a;
+            font-size: 36px;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        /* President - Main position */
+        .president-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .member-card {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .photo-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #2d6a6a;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 20px rgba(45, 106, 106, 0.3);
+            background: #e6f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .president-row .photo-circle {
+            width: 220px;
+            height: 220px;
+            border-width: 6px;
+        }
+
+        .photo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-placeholder {
+            color: #5a9999;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        .member-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2d6a6a;
+            margin-bottom: 5px;
+        }
+
+        .member-position {
+            font-size: 16px;
+            color: #5a9999;
+            font-weight: 500;
+        }
+
+        /* Grid for other positions */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Vicepresidencias Section */
+        .vicepresident-section {
+            margin-bottom: 60px;
+        }
+
+        .vicepresident-section .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        /* Color variations */
+        .fiscalia .photo-circle { border-color: #3a8080; }
+        .secretaria .photo-circle { border-color: #4a9999; }
+        .tesoreria .photo-circle { border-color: #5a9999; }
+        .vocalia .photo-circle { border-color: #2d6a6a; }
+        .capellania .photo-circle { border-color: #3a8080; }
+        .relaciones .photo-circle { border-color: #4a9999; }
+        .actividades .photo-circle { border-color: #5a9999; }
+
+        /* Responsibilities Section */
+        .responsibilities {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .responsibilities h4 {
+            color: #2d6a6a;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .responsibilities p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .president-row .photo-circle {
+                width: 180px;
+                height: 180px;
+            }
+
+            .photo-circle {
+                width: 150px;
+                height: 150px;
+            }
+
+            .members-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nuestra Planilla</h1>
+        <p>Comprometidos con servir a UNADECA</p>
+    </div>
+
+    <div class="container">
+        <!-- JUNTA DIRECTIVA CENTRAL -->
+        <section class="junta-section">
+            <h2 class="section-title">Junta Directiva Central</h2>
+
+            <!-- PRESIDENCIA -->
+            <div class="president-row">
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/luna-perez.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Luna Pérez</h3>
+                    <p class="member-position">Presidencia</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Dirección general y representación oficial ante la Administración.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTROS CARGOS EN GRID -->
+            <div class="members-grid">
+                <!-- Fiscalía -->
+                <div class="member-card fiscalia">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/victor-escobar.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Víctor Escobar</h3>
+                    <p class="member-position">Fiscalía</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Supervisión del cumplimiento de estatutos y transparencia.</p>
+                    </div>
+                </div>
+
+                <!-- Secretaría General -->
+                <div class="member-card secretaria">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/diana-salazar.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Diana Salazar</h3>
+                    <p class="member-position">Secretaría General</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Gestión de actas, correspondencia y archivo documental.</p>
+                    </div>
+                </div>
+
+                <!-- Tesorería -->
+                <div class="member-card tesoreria">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/melking-suarez.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Melking Suarez</h3>
+                    <p class="member-position">Tesorería</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Administración de recursos y elaboración de informes financieros.</p>
+                    </div>
+                </div>
+
+                <!-- Vocalía -->
+                <div class="member-card vocalia">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/jemimah-montalvo.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Jemimah Montalvo</h3>
+                    <p class="member-position">Vocalía</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Apoyo logístico y enlace con el cuerpo estudiantil.</p>
+                    </div>
+                </div>
+
+                <!-- Capellanía Estudiantil -->
+                <div class="member-card capellania">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/jihad-rodriguez.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Jihad Rodríguez</h3>
+                    <p class="member-position">Capellanía Estudiantil</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Liderazgo espiritual y coordinación de actividades misioneras.</p>
+                    </div>
+                </div>
+
+                <!-- Relaciones Públicas -->
+                <div class="member-card relaciones">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/rebecca-lucas.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Rebecca Lucas</h3>
+                    <p class="member-position">Relaciones Públicas</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Comunicación externa, redes sociales e imagen institucional.</p>
+                    </div>
+                </div>
+
+                <!-- Actividades Sociales -->
+                <div class="member-card actividades">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/adan-castillo.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Adán Castillo</h3>
+                    <p class="member-position">Actividades Sociales</p>
+                    <div class="responsibilities">
+                        <h4>Responsabilidad Principal</h4>
+                        <p>Planificación de eventos de integración y recreación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VICEPRESIDENCIAS ACADÉMICAS -->
+        <section class="vicepresident-section">
+            <h2 class="section-title">Vicepresidencias Académicas</h2>
+            <p style="text-align: center; color: #5a9999; margin-bottom: 40px;">
+                Encargados de velar por las necesidades específicas de cada área de estudio y canalizar las propuestas académicas.
+            </p>
+
+            <div class="members-grid">
+                <!-- Educación -->
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/santiago-bonilla.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Santiago Bonilla</h3>
+                    <p class="member-position">VP Educación</p>
+                </div>
+
+                <!-- Teología -->
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/abdiel-landaverde.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Abdiel Landaverde</h3>
+                    <p class="member-position">VP Teología</p>
+                </div>
+
+                <!-- Psicología -->
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/alenna-venegas.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Alenna Venegas</h3>
+                    <p class="member-position">VP Psicología</p>
+                </div>
+
+                <!-- Administración de Empresas -->
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/cesia-zelaya.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Cesia Zelaya</h3>
+                    <p class="member-position">VP Adm. Empresas</p>
+                </div>
+
+                <!-- Enfermería -->
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/carrie-serrano.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Carrie Serrano</h3>
+                    <p class="member-position">VP Enfermería</p>
+                </div>
+
+                <!-- Ingeniería y Sistemas -->
+                <div class="member-card">
+                    <div class="photo-circle">
+                        <div class="photo-placeholder">
+                            Foto<br>
+                            <small>(images/kemuel-mayorga.jpg)</small>
+                        </div>
+                    </div>
+                    <h3 class="member-name">Kemuel Mayorga</h3>
+                    <p class="member-position">VP Ing. y Sistemas</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 36px; font-weight: bold;">V</div>
+            </div>
+            <h3>VITA</h3>
+            <p class="footer-tagline">Vida · Identidad · Trascendencia · Acción</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank">
+                    <div class="social-icon">📷</div>
+                    <div>Instagram</div>
+                </a>
+            </div>
+
+            <nav class="footer-nav">
+                <a href="index.html">Inicio</a>
+                <a href="propuestas.html">Propuestas</a>
+                <a href="vota-vita.html">Vota VITA</a>
+                <a href="planilla.html">Planilla</a>
+                <a href="valores.html">Valores</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
