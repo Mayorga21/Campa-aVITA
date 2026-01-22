@@ -282,39 +282,41 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+ <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">
-                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 36px; font-weight: bold;">V</div>
+            <div class="footer-brand">
+                <div class="footer-logo-circle">V</div>
+                <div class="footer-brand-text">
+                    <h3>VITA</h3>
+                    <p>Vida · Identidad · Trascendencia · Acción</p>
+                </div>
             </div>
-            <h3>VITA</h3>
-            <p class="footer-tagline">Vida · Identidad · Trascendencia · Acción</p>
             
-            <div class="social-links">
-                <a href="#" target="_blank">
-                    <div class="social-icon">📷</div>
-                    <div>Instagram</div>
-                </a>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="propuestas.html">Propuestas</a></li>
+                    <li><a href="vota-vita.html">Vota VITA</a></li>
+                    <li><a href="planilla.html">Planilla</a></li>
+                    <li><a href="valores.html">Valores</a></li>
+                </ul>
             </div>
-
-            <nav class="footer-nav">
-                <a href="index.html">Inicio</a>
-                <a href="propuestas.html">Propuestas</a>
-                <a href="vota-vita.html">Vota VITA</a>
-                <a href="planilla.html">Planilla</a>
-                <a href="valores.html">Valores</a>
-            </nav>
+            
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <p class="footer-social-text">Mantente conectado con VITA</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon-btn" target="_blank" title="Instagram">📷</a>
+                    <!-- Agrega más redes sociales aquí cuando las tengas -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            © 2026 VITA - Movimiento Estudiantil UNADECA | Construyendo una universidad para todos
         </div>
     </footer>
-
-    <script>
-        // Add click/tap functionality for flip cards
-        document.querySelectorAll('.flip-card').forEach(card => {
-            card.addEventListener('click', function() {
-                this.classList.toggle('flipped');
-            });
-        });
-    </script>
 </body>
 </html>
