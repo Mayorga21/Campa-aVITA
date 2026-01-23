@@ -620,12 +620,32 @@
             </div>
         </div>
     </div>
+        <script>
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            document.querySelectorAll('.accordion-header').forEach(h => {
+                h.classList.remove('active');
+            });
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                c.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+    </script>
 
-<!-- FOOTER -->
+<!    <!-- FOOTER MODERNO -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="footer-logo-circle">V</div>
+                <div class="footer-logo-circle">
+                    <img src="images/logoVITA.jpg" alt="VITA Logo" style="width: 90%; height: 90%; object-fit: contain; border-radius: 50%;">
+                </div>
                 <div class="footer-brand-text">
                     <h3>VITA</h3>
                     <p>Vida · Identidad · Trascendencia · Acción</p>
@@ -648,7 +668,6 @@
                 <p class="footer-social-text">Mantente conectado con VITA</p>
                 <div class="social-icons">
                     <a href="#" class="social-icon-btn" target="_blank" title="Instagram">📷</a>
-                    <!-- Agrega más redes sociales aquí cuando las tengas -->
                 </div>
             </div>
         </div>
